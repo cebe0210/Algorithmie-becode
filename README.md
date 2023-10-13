@@ -156,9 +156,24 @@ Dans un cinéma le tarif plein est de 10 €, le tarif réduit est de 8 €. Éc
 ### Imprimerie :
 
     function prix(nombre){
-        
-    }
+        let total = 0;
 
+        if (nombre <= 10){
+            total = nombre * 0.12;
+        }
+        else if (nombre <= 30){
+            total = 1.2 + ((nombre - 10)*0.11);
+        }
+        else {
+            total = 3.4 + ((nombre -30)* 0.1);
+        }
+        return total;
+        }
+
+        let nombre = 31 // resultat = 3.5€
+        const devis = prix(nombre);
+
+        console.log("votre devis s'éleve à : " + devis + "euros");
 
 
 
