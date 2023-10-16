@@ -2,7 +2,7 @@
 
 Testez ce code sur [CodePen](https://codepen.io/C-dric-Berthet/pen/jOXRGyZ?editors=1111 "CodePen")
 
-# _Variables :_ 
+## _Variables :_ 
 
 ### Calcul :
 
@@ -43,10 +43,11 @@ Un modulo avec deux nombres choisis :
 
 Écrivez un algorithme qui reçoit un prix sans TVA et renvoie le prix avec TVA au taux de 21% .  
 
-    //TVA :
-        let p = 100;
-
-        console.log(p * 1.21); // = 121
+//TVA :
+let p = 200;
+let TVA = 21;
+const tvac = p + (p * TVA / 100);
+console.log(tvac + "€"); // resultat 242
 
 ### Calcul l'aire d'un cercle (plus périmètre):
 
@@ -175,6 +176,50 @@ Dans un cinéma le tarif plein est de 10 €, le tarif réduit est de 8 €. Éc
 
         console.log("votre devis s'éleve à : " + devis + "euros");
 
+## _Les boucles :_ 
+
+### I - imprimer des chiffres 
+
+les nombres de 1 à n
+
+    let i = 1;
+    let j = 5;
+
+    while (i <= j){
+        console.log(i);
+        i++;
+    }
+
+les nombres de 1 à n par ordre décroissant
+
+    let i = 1;
+    let j = 5;
+
+    while (j >= i){
+        console.log(j);
+        j--;
+    }
+
+
+les nombres de -n à n
+
+    let k = 12;
+    let l = -k;
+
+    while (l <= k) {
+        console.log(l);
+        l++;
+    }
+
+les nombres impairs de 1 à n
+
+    let m = 13;
+    let n = 1;
+    
+    while (n <= m) {
+        console.log(n);
+        n += 2;
+    }
 
 
 
