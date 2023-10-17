@@ -276,7 +276,7 @@ V - nombre parfait
 
     console.log(somme === nombre ? `${nombre} est un nombre parfait.` : `${nombre} n'est pas un nombre parfait.`)
 
-## _Tableaux_ :
+## [_Tableaux :_](https://codepen.io/C-dric-Berthet/pen/rNoEGrr "CodePen")
 
 I imprime un tableau
 Écrivez un algorithme qui imprime tout dans un tableau.
@@ -336,3 +336,24 @@ IV - position minimale
 
 Écrivez un algorithme qui reçoit un tableau d'entiers et vérifiez s'il est ordonné de manière ascendante. Imprime vrai si le tableau est ordonné, faux si ce n'est pas le cas.
    
+     let entiers = [4, 8, 16, 32, 64, 128, 256];
+
+    let croissant = true;
+    let decroissant = true;
+    
+
+    for (let k= 0; k < entiers.length - 1; k++){
+        if(entiers[k] > entiers[k + 1]){
+            croissant = false;
+        }
+        if(entiers[k] < entiers[k + 1]) {
+            decroissant = false;
+        }
+    }
+    if (croissant){
+        console.log(`Le tableau est rangé par ordre croissant.`);
+    } else if (decroissant){
+        console.log(`Le tableau est rangé par ordre décroissant.`);
+    } else {
+        console.log(`Le tableau est mélangé.`)
+    }
