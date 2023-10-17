@@ -411,3 +411,54 @@ détaillent chaque étape
         }
     }
     arrays(entiers); // appel la fonction. 
+## _Strings :_
+
+I - concaténation
+Écrivez une fonction qui reçoit deux chaînes et les renvoie sous la forme d'une seule chaîne.
+
+    let stng1 = "concaté"; // string 1
+    let stng2 = "nation"; //string 2
+
+    function concat (){ //fonction nommée concat
+        let stng3 = stng1 + stng2; // variable qui assemble les deux strings
+        console.log(stng3) //affichage de la variable stng3
+    }
+    concat(); // appel de la fonction
+
+II - minuscule
+Écrivez une fonction qui reçoit un caractère en majuscule et l'imprime en minuscule.
+
+    let txtmaj = "SPACEX"; // variable avec le texte en majuscule.
+
+    function maj(){
+        let minuscule = txtmaj.toLowerCase();//toLowerCase converti le text majuscule en muniscule.
+        console.log(minuscule);
+    }
+    maj();
+
+III - majuscule
+Écrivez une fonction qui reçoit une chaîne en minuscules et renvoie une phrase en majuscule.
+
+    let txtmin = "blue-origin"; // variable avec le texte en minuscule.
+
+    function minus(){
+        let majuscule = txtmin.toUpperCase();//toUpperCase converti le text muniscule en majuscule .
+        console.log(majuscule);
+    }
+    minus();
+
+IV - convertir le nom
+Écrivez une fonction qui reçoit un nom dans ce format "Doe, John" et le renvoie dans ce format "John Doe"
+
+let nom = ["Doe", "John"]; //nom à inverser
+
+function switchname(nom){ //fonction nommée switchname liée au tableau nom
+
+    let swt = ""; //variable dans laquelle les noms sont inversés
+    for (let i = nom.length -1; i >= 0; i--){ //boucle qui commence par dernier elements du tableau et revient vers le premier.
+        swt += nom[i] + " "; //commande qui MAJ la variable swt
+        
+    }
+    console.log(swt); //commande d'affichage
+}
+switchname(nom); //appel de la fonction
