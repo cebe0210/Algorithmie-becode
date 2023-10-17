@@ -366,3 +366,48 @@ traduire les cinq exercices précédents en fonctions modulaires
 
 détaillent chaque étape
 
+
+    // 3 arrangements de nombre afin de faire les tests.
+    let entiers = //[4, 8, 16, 32, 64, 128, 256]; croissant
+                    [32, 256, 8, 64, 128, 4, 16]; décroissant
+                    //[256, 128, 64, 32, 16, 8, 4]; mélangé
+
+    //la fonction :
+    function arrays (entiers){ //fonction du nom **arrays** utilisant la variable **entiers**
+        let min = entiers[0]; //le plus petit nombre.
+        let max = entiers[0]; //le plus grand nombre.
+        let pmin = 0; //position du plus petit nombre.
+        let pmax = 0; //position du plus grand nombre.
+        let croissant = true; //le tableau est rangé par ordre croissant.
+        let decroissant = true; //le tableau est rangé par ordre décroissant.
+
+
+        // une boucle **for** qui analyse la variable entiers.
+        for (let i = 0; i < entiers.length - 1; i++) { //**i** permet à la boucle de parcourir le tableau **entiers**
+            if(entiers[i] < min){ //met à jour les **variables** **si** le nombre analysé est plus petit que **min**
+                min = entiers[i]; //MAJ le plus petit nombre
+                pmin = i; //MAJ position du plus petit nombre
+            }
+            if(entiers[i] > max){//met à jour les **variables** **si** le nombre analysé est plus grand que **max**
+                max = entiers[i]; //MAJ le plus grand nombre
+                pmax = i; //MAJ la position du plus grand nombre
+            }
+            
+            if(entiers[i] > entiers[i + 1]){ //analyse à chaque itération si **i** est plus grand que **i +1**.
+                croissant = false; // si **i +1** est plus petit, ce ne pas croissant
+            }
+            if(entiers[i] < entiers[i + 1]){
+                decroissant = false; si **i +1** est plus petit, ce ne pas decroissant
+
+            }              
+               
+        }
+        if (croissant){ //**si** la variable **entiers** est rangé en ordre croissant affiche...
+            console.log(`Le tableau est rangé par ordre croissant. \n Le plus petit nombre est ${min}, qui est situé à la ${pmin}. \n Le plus grand nombre est ${max} et est placer à la ${pmax}, eme place du tableau.`);
+        } else if (decroissant){//**sinon si** la variable **entiers** est rangé en ordre décroissant affiche...
+            console.log(`Le tableau est rangé par ordre décroissant. \n Le plus petit nombre est ${min}, qui est situé à la ${pmin}. \n Le plus grand nombre est ${max} et est placer à la ${pmax}, eme place du tableau.`);
+        } else {//**sinon** la variable **entiers** est mélangé (if et else if etant fasle) affiche...
+            console.log(`Le tableau est mélangé. \n Le plus petit nombre est ${min}, qui est situé à la ${pmin}. \n Le plus grand nombre est ${max} et est placer à la ${pmax}eme place du tableau.`);
+        }
+    }
+    arrays(entiers); // appel la fonction. 
