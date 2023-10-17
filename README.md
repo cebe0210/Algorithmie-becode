@@ -357,3 +357,12 @@ IV - position minimale
     } else {
         console.log(`Le tableau est mélangé.`)
     }
+
+## [_Les fonctions :_](https://codepen.io/C-dric-Berthet/pen/YzdoEjV "CodePen")
+
+Exercices
+Instructions
+traduire les cinq exercices précédents en fonctions modulaires
+
+détaillent chaque étape
+
