@@ -215,11 +215,68 @@ les nombres impairs de 1 à n
 
     let m = 13;
     let n = 1;
-    
+
     while (n <= m) {
         console.log(n);
         n += 2;
     }
 
+II - imprimer un nombre aléatoire d'entiers
+Écrivez un algorithme qui reçoit un entier aléatoire et y imprime de 0
+
+    let o = Math.floor(Math.random() * 50) + 1;
+    let q = 0;
+
+    while (q <= o){
+        console.log(q);
+        q++;
+    }
+
+
+III - lancer les dés
+Écrivez un algorithme qui lance un dé un nombre de fois donné et compte le nombre de fois qu'un certain nombre est reçu.
+
+    let t = 8; //nombre de lancement du dé
+    let s = 4; // quel resultat compter
+    let nbs = 0;
+
+    while (t >= 0){
+        let u = Math.floor(Math.random() * 6) + 1;
+        if (u === s){
+        nbs++;    
+        }
+    t--;
+    }
+    console.log(`le nombre de ${s} sorti est de ${nbs}`);
+
+
+IV - nombres pairs
+Écrivez un algorithme qui imprime tous les nombres pairs de 0 à un nombre donné.
+
+    let v = 16 //nombre donné
+    let w = 0 
+
+    while (w <= v){
+    console.log(w)
+    w += 2
+    }
+
+V - nombre parfait
+Écrivez un algorithme qui vérifie si un entier positif donné est un nombre parfait, c'est-à-dire égal à la somme de ses diviseurs (sauf lui-même).
+
+    let nombre = 28; //nombre à verifier
+
+    let somme = 0;
+    let diviseur = 1;
+
+    while (diviseur < nombre) {
+        somme += nombre % diviseur ===0 ? diviseur : 0;
+        diviseur++;
+    }
+
+    console.log(somme === nombre ? `${nombre} est un nombre parfait.` : `${nombre} n'est pas un nombre parfait.`)
+
+
+     
 
 
