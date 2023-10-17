@@ -27,15 +27,24 @@ let txtmin = "blue-origin"; // variable avec le texte en minuscule.
     minus();
 
 
-let nom = ["Doe", "John"];
+let nom = ["Doe", "John"]; //nom à inverser
 
-function switchname(nom){
+function switchname(nom){ //fonction nommée switchname liée au tableau nom
 
-    let swt = "";
-    for (let i = nom.length -1; i >= 0; i--){
-        swt += nom[i] + " ";
+    let swt = ""; //variable dans laquelle les noms sont inversés
+    for (let i = nom.length -1; i >= 0; i--){ //boucle qui commence par dernier elements du tableau et revient vers le premier.
+        swt += nom[i] + " "; //commande qui MAJ la variable swt
         
     }
-    console.log(swt);
+    console.log(swt); //commande d'affichage
 }
-switchname(nom);
+switchname(nom); //appel de la fonction
+
+let espace = "ceci est une chaine avec des espaces";
+
+function delspc(espace){
+    let sansespace = espace.replace(/\s/g, '');
+    console.log(sansespace);
+}
+delspc(espace);
+

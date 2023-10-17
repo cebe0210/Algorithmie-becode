@@ -233,7 +233,7 @@ II - imprimer un nombre aléatoire d'entiers
     }
 
 
-III - lancer les dés
+### III - lancer les dés
 Écrivez un algorithme qui lance un dé un nombre de fois donné et compte le nombre de fois qu'un certain nombre est reçu.
 
     let t = 8; //nombre de lancement du dé
@@ -250,7 +250,7 @@ III - lancer les dés
     console.log(`le nombre de ${s} sorti est de ${nbs}`);
 
 
-IV - nombres pairs
+### IV - nombres pairs
 Écrivez un algorithme qui imprime tous les nombres pairs de 0 à un nombre donné.
 
     let v = 16 //nombre donné
@@ -261,7 +261,7 @@ IV - nombres pairs
     w += 2
     }
 
-V - nombre parfait
+### V - nombre parfait
 Écrivez un algorithme qui vérifie si un entier positif donné est un nombre parfait, c'est-à-dire égal à la somme de ses diviseurs (sauf lui-même).
 
     let nombre = 28; //nombre à verifier
@@ -278,7 +278,7 @@ V - nombre parfait
 
 ## [_Tableaux :_](https://codepen.io/C-dric-Berthet/pen/rNoEGrr "CodePen")
 
-I imprime un tableau
+### I imprime un tableau
 Écrivez un algorithme qui imprime tout dans un tableau.
 
     let ingredients = ['Penne', 'Pancetta', 'Oeufs', 'Pecorino-Romano', 'Poivre-noir'];
@@ -287,7 +287,7 @@ I imprime un tableau
 
     console.log('notre tableau contient ' + ingredients.length + ' éléments')
 
-II - maximum
+### II - maximum
 Écrivez un algorithme qui reçoit un tableau d'entiers et imprime son maximum . 
 
     let entiers = [4, 8, 16, 32, 64, 128, 256];
@@ -302,7 +302,7 @@ II - maximum
     console.log(`le plus grand nombre est : ${maximum}`)
 
 
-III - minimum
+### III - minimum
 Écrivez un algorithme qui reçoit un tableau d'entiers et imprime son minimum .
 
 
@@ -317,7 +317,7 @@ III - minimum
     }
     console.log(`le plus petit nombre est : ${minimum}`)
 
-IV - position minimale
+### IV - position minimale
 Écrivez un algorithme qui reçoit un tableau d'entiers et imprime la position de son minimum .
 
     let entiers = [4, 8, 16, 32, 64, 128, 256];
@@ -333,6 +333,7 @@ IV - position minimale
     }
     console.log(`le plus petit nombre est : ${minimum} et se trouve à la position ${pmin} dans le tableau`);
 
+### V - tableau ordonné
 
 Écrivez un algorithme qui reçoit un tableau d'entiers et vérifiez s'il est ordonné de manière ascendante. Imprime vrai si le tableau est ordonné, faux si ce n'est pas le cas.
    
@@ -411,9 +412,9 @@ détaillent chaque étape
         }
     }
     arrays(entiers); // appel la fonction. 
-## _Strings :_
+## [_Strings :_](https://codepen.io/C-dric-Berthet/pen/jOXjZgZ "CodePen")
 
-I - concaténation
+### I - concaténation
 Écrivez une fonction qui reçoit deux chaînes et les renvoie sous la forme d'une seule chaîne.
 
     let stng1 = "concaté"; // string 1
@@ -425,7 +426,7 @@ I - concaténation
     }
     concat(); // appel de la fonction
 
-II - minuscule
+### II - minuscule
 Écrivez une fonction qui reçoit un caractère en majuscule et l'imprime en minuscule.
 
     let txtmaj = "SPACEX"; // variable avec le texte en majuscule.
@@ -436,7 +437,7 @@ II - minuscule
     }
     maj();
 
-III - majuscule
+### III - majuscule
 Écrivez une fonction qui reçoit une chaîne en minuscules et renvoie une phrase en majuscule.
 
     let txtmin = "blue-origin"; // variable avec le texte en minuscule.
@@ -447,18 +448,28 @@ III - majuscule
     }
     minus();
 
-IV - convertir le nom
+### IV - convertir le nom
 Écrivez une fonction qui reçoit un nom dans ce format "Doe, John" et le renvoie dans ce format "John Doe"
 
-let nom = ["Doe", "John"]; //nom à inverser
+    let nom = ["Doe", "John"]; //nom à inverser
 
-function switchname(nom){ //fonction nommée switchname liée au tableau nom
+    function switchname(nom){ //fonction nommée switchname liée au tableau nom
 
-    let swt = ""; //variable dans laquelle les noms sont inversés
-    for (let i = nom.length -1; i >= 0; i--){ //boucle qui commence par dernier elements du tableau et revient vers le premier.
-        swt += nom[i] + " "; //commande qui MAJ la variable swt
-        
-    }
+        let swt = ""; //variable dans laquelle les noms sont inversés
+        for (let i = nom.length -1; i >= 0; i--){ //boucle qui commence par dernier elements du tableau et revient vers le premier.
+        swt += nom[i] + " "; //commande qui MAJ la variable swt   
+        }
     console.log(swt); //commande d'affichage
-}
-switchname(nom); //appel de la fonction
+    }
+    switchname(nom); //appel de la fonction
+
+### V - espace
+Écrivez une fonction qui reçoit une phrase pleine d'espaces et la renvoie sans eux.
+
+    let espace = "ceci est une chaine avec des espaces";
+
+    function delspc(espace){
+        let sansespace = espace.replace(/\s/g, '');//permet de supprimer les espaces...
+        console.log(sansespace);
+    }
+    delspc(espace);
