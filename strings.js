@@ -43,8 +43,9 @@ switchname(nom); //appel de la fonction
 let espace = "ceci est une chaine avec des espaces";
 
 function delspc(espace){
-    let sansespace = espace.replace(/\s/g, '');
+    let sansespace = espace.replace(/\s/g, '');//permet de supprimer les espaces...
     console.log(sansespace);
 }
 delspc(espace);
 
+let random = Math.

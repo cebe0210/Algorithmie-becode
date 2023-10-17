@@ -370,8 +370,8 @@ détaillent chaque étape
 
     // 3 arrangements de nombre afin de faire les tests.
     let entiers = //[4, 8, 16, 32, 64, 128, 256]; croissant
-                    [32, 256, 8, 64, 128, 4, 16]; décroissant
-                    //[256, 128, 64, 32, 16, 8, 4]; mélangé
+                    [32, 256, 8, 64, 128, 4, 16]; mélangé
+                    //[256, 128, 64, 32, 16, 8, 4]; décroissant
 
     //la fonction :
     function arrays (entiers){ //fonction du nom **arrays** utilisant la variable **entiers**
@@ -473,3 +473,18 @@ détaillent chaque étape
         console.log(sansespace);
     }
     delspc(espace);
+
+## Trial
+
+    let n = 8 //nombre de nombre aléatoire
+
+    function nrandom(n){
+        let nbrrandom = []; //variable stockera les nombres generer
+
+        for (let i = 0; i < n; i++){ boucle tant que **i** est plus petit que **n** la boucle continue.
+            let random = Math.floor(Math.random() *100); // Math.floor permet d'arrondir et ainsi n'avoir que des entiers. Math.random genere des nombres aléatoire entre 0 et 100(*100)
+            nbrrandom.push(random); // push ajoute le nombre genere par random dans nbrrandom
+        }
+        console.log(nbrrandom); affiche nbrrandom   
+    }
+    nrandom(n); appel la fonction
