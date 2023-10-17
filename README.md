@@ -276,7 +276,63 @@ V - nombre parfait
 
     console.log(somme === nombre ? `${nombre} est un nombre parfait.` : `${nombre} n'est pas un nombre parfait.`)
 
+## _Tableaux_ :
 
-     
+I imprime un tableau
+Écrivez un algorithme qui imprime tout dans un tableau.
+
+    let ingredients = ['Penne', 'Pancetta', 'Oeufs', 'Pecorino-Romano', 'Poivre-noir'];
+
+    console.log(`Faire cuire les ${ingredients[0]}, mélangez le ${ingredients[3]}, les jaunes ${ingredients[2]} et le ${ingredients[4]}, faire cuire la ${ingredients[1]}.`);
+
+    console.log('notre tableau contient ' + ingredients.length + ' éléments')
+
+II - maximum
+Écrivez un algorithme qui reçoit un tableau d'entiers et imprime son maximum . 
+
+    let entiers = [4, 8, 16, 32, 64, 128, 256];
+
+    let maximum = entiers[0]
+
+    for(let i= 1; i< entiers.length; i++){
+        if(entiers[i] > maximum){
+            maximum = entiers[i];
+        }
+    }
+    console.log(`le plus grand nombre est : ${maximum}`)
 
 
+III - minimum
+Écrivez un algorithme qui reçoit un tableau d'entiers et imprime son minimum .
+
+
+    let entiers = [4, 8, 16, 32, 64, 128, 256];
+
+    let minimum = entiers[0];
+
+    for(let j= 1; j< entiers.length; j++){
+        if(entiers[j] < minimum){
+            minimum = entiers[j];
+        }
+    }
+    console.log(`le plus petit nombre est : ${minimum}`)
+
+IV - position minimale
+Écrivez un algorithme qui reçoit un tableau d'entiers et imprime la position de son minimum .
+
+    let entiers = [4, 8, 16, 32, 64, 128, 256];
+
+    let minimum = entiers[0];
+    let pmin = 0;
+
+    for(let j= 1; j< entiers.length; j++){
+        if(entiers[j] < minimum){
+            minimum = entiers[j];
+            pmin = j;
+        }
+    }
+    console.log(`le plus petit nombre est : ${minimum} et se trouve à la position ${pmin} dans le tableau`);
+
+
+Écrivez un algorithme qui reçoit un tableau d'entiers et vérifiez s'il est ordonné de manière ascendante. Imprime vrai si le tableau est ordonné, faux si ce n'est pas le cas.
+   
