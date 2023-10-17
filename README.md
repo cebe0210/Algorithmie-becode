@@ -474,7 +474,10 @@ détaillent chaque étape
     }
     delspc(espace);
 
-## Trial
+## [_Trial :_](https://codepen.io/C-dric-Berthet/pen/jOXjKBB "CodePen")
+
+### I - liste de nombres aléatoires
+Écrivez une fonction qui renvoie un tableau de n nombres aléatoires, n étant le seul paramètre reçu .
 
     let n = 8 //nombre de nombre aléatoire
 
@@ -488,3 +491,5 @@ détaillent chaque étape
         console.log(nbrrandom); affiche nbrrandom   
     }
     nrandom(n); appel la fonction
+
+

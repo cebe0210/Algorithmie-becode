@@ -48,4 +48,48 @@ function delspc(espace){
 }
 delspc(espace);
 
-let random = Math.
+
+
+
+let n = 8 //nombre de nombre aléatoire
+
+function nrandom(n){
+    let nbrrandom = [];
+
+    for (let i = 0; i < n; i++){
+        let random = Math.floor(Math.random() *100);
+        nbrrandom.push(random);
+    }
+    console.log(nbrrandom);
+    return nbrrandom;
+}
+nrandom(n);
+
+
+let n = 8; //nombre de nombre aléatoire
+let nbrrandom = []; //variable stockera les nombres generes
+let searchnbr = 42; //le nombre à rechercher
+function nrandom(n){
+    
+    for (let i = 0; i < n; i++){ //boucle tant que **i** est plus petit que **n** la boucle continue.
+        let random = Math.floor(Math.random() *100); // Math.floor permet d'arrondir et ainsi n'avoir que des entiers. Math.random genere des nombres aléatoire entre 0 et 100(*100)
+        nbrrandom.push(random); // push ajoute le nombre genere par random dans nbrrandom
+    }
+    console.log(nbrrandom); //affiche nbrrandom   
+}
+nrandom(n); //appel la fonction
+
+let croissant = [...nbrrandom].sort((a, b) => a - b); //permet de trier le tableau nbrrandom. les ... permet de copier le tableau nbrrandom.
+console.log(croissant); // affiche les nombres par ordre croissant
+
+
+function inarray(searchnbr, nbrrandom) { //cette fonction cherche l'element **searchnbr** dans le tableau nbrrandom.
+    let exist = false; 
+    for (let i = 0; i < nbrrandom.length; i++){ //tant que la variable i est inferieur au nombre d'elements du tableau, la boucle continue
+        if (searchnbr === nbrrandom[i]){ //si le nombre recherché est dans le tableau, la variable **exist** devient true
+            exist = true;
+        }
+    }
+    console.log(exist); //affiche le resultat
+}
+inarray(searchnbr, nbrrandom); //appel de la fonction
